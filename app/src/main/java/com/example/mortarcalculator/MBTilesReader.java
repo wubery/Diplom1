@@ -11,13 +11,17 @@ public class MBTilesReader {
     private int maxZoom;
 
     public MBTilesReader(String mbTilesPath) {
-        database = SQLiteDatabase.openDatabase(mbTilesPath, null, SQLiteDatabase.OPEN_READONLY);
-        Cursor cursor = database.rawQuery("SELECT MIN(zoom_level), MAX(zoom_level) FROM tiles", null);
-        if (cursor.moveToFirst()) {
-            minZoom = cursor.getInt(0);
-            maxZoom = cursor.getInt(1);
+        try {
+            database = SQLiteDatabase.openDatabase(mbTilesPath, null, SQLiteDatabase.OPEN_READONLY);
+            Cursor cursor = database.rawQuery("SELECT MIN(zoom_level), MAX(zoom_level) FROM tiles", null);
+            if (cursor.moveToFirst()) {
+                minZoom = cursor.getInt(0);
+                maxZoom = cursor.getInt(1);
+            }
+            cursor.close();
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to open MBTiles file: " + mbTilesPath, e);
         }
-        cursor.close();
     }
 
     public Bitmap getTile(int zoom, int tileX, int tileY) {

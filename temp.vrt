@@ -1,0 +1,27 @@
+<VRTDataset rasterXSize="3600" rasterYSize="3600">
+  <SRS dataAxisToSRSAxisMapping="2,1">GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4326"]]</SRS>
+  <GeoTransform>  4.6000000000000000e+01,  2.7777777777777778e-04,  0.0000000000000000e+00,  5.4000000000000000e+01,  0.0000000000000000e+00, -2.7777777777777778e-04</GeoTransform>
+  <Metadata>
+    <MDI key="AREA_OR_POINT">Area</MDI>
+    <MDI key="TIFFTAG_IMAGEDESCRIPTION">Product Version 4.1</MDI>
+    <MDI key="TIFFTAG_XRESOLUTION">1</MDI>
+    <MDI key="TIFFTAG_YRESOLUTION">1</MDI>
+  </Metadata>
+  <Metadata domain="IMAGE_STRUCTURE">
+    <MDI key="INTERLEAVE">BAND</MDI>
+  </Metadata>
+  <VRTRasterBand dataType="Byte" band="1" blockXSize="3600" blockYSize="1">
+    <NoDataValue>0</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">E:\diplom2\app\src\main\assets\N053E046\N053E046\ALPSMLC30_N053E046_DSM.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="3600" RasterYSize="3600" DataType="Int16" BlockXSize="3600" BlockYSize="1" />
+      <SrcRect xOff="0" yOff="0" xSize="3600" ySize="3600" />
+      <DstRect xOff="0" yOff="0" xSize="3600" ySize="3600" />
+      <NODATA>-9999</NODATA>
+      <ScaleOffset>-131.266</ScaleOffset>
+      <ScaleRatio>1.07595</ScaleRatio>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>
